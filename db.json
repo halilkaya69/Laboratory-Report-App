@@ -1,0 +1,88 @@
+{
+  "reports": [
+    {
+      "laborantAd": "Ali",
+      "laborantSoyad": "Veli",
+      "laborantNo": "1111111",
+      "dosyaNo": "1",
+      "hastaAd": "Halil",
+      "hastaSoyad": "KAYA",
+      "hastaTC": "11111111111",
+      "tarih": "17.05.2024",
+      "taniAdi": "Migren",
+      "taniDetay": "Hasta şiddetli baş ağrısı ve ışığa hassasiyet şikayetiyle geldi.",
+      "taniResimLink": "https://halilkaya3.wordpress.com/wp-content/uploads/2023/02/cropped-whatsapp-gorsel-2023-02-03-saat-18.39.01.jpg",
+      "id": "2bb8"
+    },
+    {
+      "laborantAd": "Mehmet",
+      "laborantSoyad": "Yılmaz",
+      "laborantNo": "2222222",
+      "dosyaNo": "2",
+      "hastaAd": "Ahmet",
+      "hastaSoyad": "DEMİR",
+      "hastaTC": "22222222222",
+      "tarih": "13.05.2024",
+      "taniAdi": "Hipertansiyon",
+      "taniDetay": "Hasta yüksek tansiyon ve baş dönmesi şikayetiyle geldi.",
+      "taniResimLink": "https://d10fbf87uv1xiy.cloudfront.net/456/kicerik/17171/123247.jpg",
+      "id": "4bb7"
+    },
+    {
+      "laborantAd": "Ayşe",
+      "laborantSoyad": "Kara",
+      "laborantNo": "3333333",
+      "dosyaNo": "3",
+      "hastaAd": "Mehmet",
+      "hastaSoyad": "ÇELİK",
+      "hastaTC": "33333333333",
+      "tarih": "14.05.2024",
+      "taniAdi": "Diyabet",
+      "taniDetay": "Hasta aşırı susama ve yorgunluk şikayetiyle geldi, kan şekeri yüksek çıktı.",
+      "taniResimLink": "https://d10fbf87uv1xiy.cloudfront.net/456/kicerik/17171/123247.jpg",
+      "id": "4395"
+    },
+    {
+      "laborantAd": "Fatma",
+      "laborantSoyad": "Ak",
+      "laborantNo": "4444444",
+      "dosyaNo": "4",
+      "hastaAd": "Osman",
+      "hastaSoyad": "KOÇ",
+      "hastaTC": "44444444444",
+      "tarih": "15.05.2024",
+      "taniAdi": "Astım",
+      "taniDetay": "Hasta nefes darlığı ve göğüs sıkışması şikayetiyle geldi.",
+      "taniResimLink": "https://d10fbf87uv1xiy.cloudfront.net/456/kicerik/17171/123247.jpg",
+      "id": "e12a"
+    },
+    {
+      "laborantAd": "Can",
+      "laborantSoyad": "Eren",
+      "laborantNo": "5555555",
+      "dosyaNo": "5",
+      "hastaAd": "Ali",
+      "hastaSoyad": "YILDIZ",
+      "hastaTC": "55555555555",
+      "tarih": "16.05.2024",
+      "taniAdi": "Gribal Enfeksiyon",
+      "taniDetay": "Hasta yüksek ateş ve boğaz ağrısı şikayetiyle geldi.",
+      "taniResimLink": "https://d10fbf87uv1xiy.cloudfront.net/456/kicerik/17171/123247.jpg",
+      "id": "788f"
+    },
+    {
+      "id": "90d8",
+      "laborantAd": "Halil",
+      "laborantSoyad": "Kaya",
+      "laborantNo": "1111111",
+      "dosyaNo": "11",
+      "hastaAd": "Ali",
+      "hastaSoyad": "Kaya",
+      "hastaTC": "11111111110",
+      "tarih": "23.06.2024",
+      "taniAdi": "Kronik Yorgunluk Sendromu",
+      "taniDetay": "Hasta uzun süreli yorgunluk ve halsizlik şikayetiyle geldi.",
+      "taniResimLink": "https://www.terapievreni.com/data/blog/ruhu-yorgun-olanlar-okumali_1629b1da6c5795.png"
+    }
+  ]
+}
