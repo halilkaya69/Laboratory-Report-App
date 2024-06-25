@@ -26,16 +26,16 @@ class TableTr1 extends Component {
             )}
           </Table.Td>
           <Table.Td>
-            <Button>
-              {" "}
-              <Link to={`/duzenle/${this.props.report.id}`}>Duzenle</Link>
-            </Button>
+            
+              
+              <Link to={`/duzenle/${this.props.report.id}`}><Button>Duzenle</Button></Link>
+            
           </Table.Td>
 
           <Table.Td>
-            <Button>
-              <Link to={`/detay/${this.props.report.id}`}>Detay</Link>
-            </Button>
+            
+              <Link to={`/detay/${this.props.report.id}`}><Button>Detay </Button></Link>
+           
           </Table.Td>
           <Table.Td>
             <Button onClick={() => this.props.deleteData(this.props.report.id)}>

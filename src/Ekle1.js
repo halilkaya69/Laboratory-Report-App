@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { TextInput, Button, Table } from "@mantine/core";
 import TableTr1 from "./TableTr1";
+
 class Ekle1 extends Component {
   constructor(props) {
     super(props);
@@ -18,14 +19,7 @@ class Ekle1 extends Component {
         taniDetay: "",
         taniResimLink: "",
       },
-      counter: 1,
-      reports: [],
-      arananDeger: "", 
     };
-  }
-
-  componentDidMount() {
-    this.props.getReports();
   }
 
   handleChange = (event) => {
@@ -38,29 +32,9 @@ class Ekle1 extends Component {
     }));
   };
 
-  handleAdd = (event) => {
-    console.log("add");
+  handleSubmit = (event) => {
     event.preventDefault();
-
-    fetch("http://localhost:3000/reports", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(this.state.report),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        console.log("Post successfully added");
-        // Ekledikten sonra kategorileri yeniden yükle
-        this.props.getReports();
-        
-      })
-      .catch((error) => {
-        console.error("Error adding post:", error);
-      });
+    this.props.handleAdd(this.state.report); // handleAdd fonksiyonunu props olarak çağırıyoruz
   };
 
   render() {
@@ -71,7 +45,7 @@ class Ekle1 extends Component {
         <h1>Yeni Kayıt Ekle</h1>
 
         <div>
-          <form onSubmit={this.handleAdd}>
+          <form onSubmit={this.handleSubmit}>
             <TextInput
               label="laborantAd"
               name="laborantAd"

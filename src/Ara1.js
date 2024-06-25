@@ -1,52 +1,41 @@
-import React, { Component } from "react";
-import { Button, Select ,TextInput} from "@mantine/core";
-import Table1 from "./Table1";
+import React, { useState } from 'react';
+import '@mantine/core/styles.css';
 
-class Ara1 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      arananDeger: "", 
-      arananDeger2: "", 
-      reports: [],
-    };
-  }
+import Table1 from './Table1';
+import { useFindReportQuery } from './services/report';
+import { Button, Select, TextInput } from "@mantine/core";
 
-  
-  handleSubmit = (event) => {
-    event.preventDefault();
-    this.findReport(this.state.arananDeger,this.state.arananDeger2);
+const Ara1 = (props) => {
+  //const [reports, setReports] = useState([]);
+  const [arananDeger, setArananDeger] = useState(''); 
+  const [arananDeger2, setArananDeger2] = useState('');
+
+  // RTK Query hooks
+  const { data: reportData, error: reportError, refetch: refetchReport } = useFindReportQuery({ arananDeger, arananDeger2 });
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    refetchReport({ arananDeger, arananDeger2 });
   };
-  
-  handleChange = (event) => {
+
+  const handleChange = (value) => {
+    setArananDeger(value);
+  };
+
+  const handleChange2 = (event) => {
     const { value } = event.target;
-    this.setState((prevState) => ({
-        arananDeger2:value
-      
-    }));
+    setArananDeger2(value);
   };
-  findReport = (arananDeger,arananDeger2) => {
-    fetch("http://localhost:3000/reports/?"+arananDeger+"="+arananDeger2)
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({ reports: data });
-      })
-      .catch((error) => {
-        console.error('Error fetching reports:', error);
-      });
-  };
-  
 
-
-  render() {
-    return (
+  return (
+    <div>
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={handleSearch}>
           <Select
             label="Rapor ara"
             placeholder="Pick value"
-            value={this.state.arananDeger}
-            onChange={(value) => this.setState({ arananDeger: value })}
+            value={arananDeger}
+            onChange={handleChange}
             data={[
               "laborantAd",
               "laborantSoyad",
@@ -63,21 +52,21 @@ class Ara1 extends Component {
             mb="sm"
           />
           <TextInput
-              label="laborantAd"
-              name="laborantAd"
-              type="text"
-              id="laborantAd"
-              onChange={this.handleChange}
-
-              />
+            label="Aranan Değer"
+            name="laborantAd"
+            type="text"
+            id="laborantAd"
+            value={arananDeger2}
+            onChange={handleChange2}
+          />
           <Button type="submit" fullWidth>
             Ara
           </Button>
         </form>
-        <Table1 reports={this.state.reports} deleteData={this.props.deleteData} />
-        </div>
-    );
-  }
-}
+        <Table1 reports={reportData || []} deleteData={props.deleteData}/>
+      </div>
+    </div>
+  );
+};
 
 export default Ara1;

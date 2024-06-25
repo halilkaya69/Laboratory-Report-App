@@ -9,15 +9,15 @@ export default class Navi extends Component {
 
         <div style={{ display: "flex", alignItems: "center" }}>
           <Menu width={200}>
-            <Button style={{ marginLeft: "20px" }}>
-              <Link to="/">Ana Sayfa</Link>
-            </Button>
-            <Button style={{ marginLeft: "20px" }}>
-              <Link to="/ekle">Rapor Ekle</Link>
-            </Button>
-            <Button style={{ marginLeft: "20px" }}>
-              <Link to="/ara">Rapor Ara</Link>
-            </Button>
+            
+              <Link to="/"><Button style={{ marginLeft: "20px" }}>Ana Sayfa </Button></Link>
+           
+            
+              <Link to="/ekle"><Button style={{ marginLeft: "20px" }}>Rapor Ekle</Button></Link>
+            
+            
+              <Link to="/ara"><Button style={{ marginLeft: "20px" }}>Rapor Ara </Button></Link>
+           
           </Menu>
         </div>
 
